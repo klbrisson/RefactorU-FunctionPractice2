@@ -49,3 +49,51 @@ var negativeIndex = function(arr, num) {
 		throw new Error("Not in range");
 	}
 };
+
+
+// 5. Write a function called 'removeM' which takes a single string argument and
+// removes all 'm' characters from the string. The function should return the new string.
+var removeM = function(str) {
+	var newStr = '';
+	var strArr = str.toLowerCase().split('');
+	console.log(strArr);
+
+	for (var i=0; i < strArr.length; i++) {
+		if (strArr[i] !== 'm') {
+			newStr += strArr[i];
+			console.log(newStr);
+		}
+	};
+	return newStr;
+};
+
+
+removeM('MMMMM');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -31,16 +31,47 @@ describe("keyValue", function() {
 
 
 describe("negativeIndex", function() {
-	it("should take an array and a negative number, and return the value from the array at the given negative index"), function() {
+	it("should take an array and a negative number, and return the value from the array at the given negative index", function() {
 		expect(negativeIndex(['a', 'b', 'c', 'd', 'e'], -2)).toBe('d');
-	};
-	it("should return the item at the index as normal if the number is positive"), function() {
+	});
+	it("should return the item at the index as normal if the number is positive", function() {
 		expect(negativeIndex(['a', 'b', 'c', 'd', 'e'], 2)).toBe('c');
-	};
-	it("should return the whole array if no number is given"), function() {
+	});
+	it("should return the whole array if no number is given", function() {
 		expect(negativeIndex(['a', 'b', 'c', 'd', 'e'])).toEqual(['a', 'b', 'c', 'd', 'e']);
-	};
+	});
 	it("should throw an error if the number is greater than the length", function() {
 		expect(function(){negativeIndex(['a', 'b', 'c', 'd', 'e'], 10)}).toThrow(new Error("Not in range"));
 	});
 });
+
+
+describe("removeM", function() {
+	it("should remove all 'm' characters in a string, uppercase and lowercase", function() {
+		expect(removeM('family')).toBe('faily');
+		expect(removeM('Memory')).toBe('eory')
+	});
+	it("should return an empty string if all characters are 'm'", function() {
+		expect(removeM('MMMMM')).toBe('');
+		expect(removeM('mmmmm')).toBe('');
+	});
+	it("should preserve whitespace in the string, even if all other characters are 'm'", function() {
+		expect(removeM('m M m M ')).toBe('    ');
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
