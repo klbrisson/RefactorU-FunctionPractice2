@@ -68,10 +68,22 @@ var removeM = function(str) {
 };
 
 
-removeM('MMMMM');
+// 6. Write a function called 'printObject' which takes a single object argument and
+// console.log's each key-value pair in the format key is value on separate lines.
+var printObject = function(obj) {
+	var str = '';
+	for(key in obj) {
+		str += key + ' is ' + obj[key] + '\n';
+	}
+	console.log(str);
+};
 
 
-
+// 7. Write a function called 'vowels' which takes a string and returns
+// an array of all the vowels in the string, including duplicates.
+var vowels = function(str) {
+	
+};
 
 
 

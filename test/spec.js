@@ -60,6 +60,13 @@ describe("removeM", function() {
 	});
 });
 
+// FUNCTION PRINTOBJECT COMPLETE, NEED TO FINISH SPEC
+// describe("printObject", function() {
+// 	it("should console log each key-value pair of an object in the format 'key is value' on separate lines", function() {
+
+// 	});
+// });
+
 
 
 
