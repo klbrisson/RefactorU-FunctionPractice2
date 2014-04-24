@@ -1,5 +1,5 @@
 
-
+// #1. getName
 describe("getName",function() {
 	it("should return the value of a key 'name' in an object", function() {
 		expect(getName({ name: 'Luisa', age: 25 })).toBe('Luisa');
@@ -9,7 +9,7 @@ describe("getName",function() {
 	});
 });
 
-
+// #2. totalLetters
 describe("totalLetters", function() {
 	it("should return the total number of all letters in an array of strings", function() {
 		expect(totalLetters(['javascript', 'is', 'awesome'])).toBe(19);
@@ -22,14 +22,14 @@ describe("totalLetters", function() {
 
 });
 
-
+// #3. keyValue
 describe("keyValue", function() {
 	it("should create an object with a key of the first arguement and value of the second", function() {
 		expect(keyValue('city', 'Denver')).toEqual({city: "Denver"});
 	});
 });
 
-
+// #4. negativeIndex
 describe("negativeIndex", function() {
 	it("should take an array and a negative number, and return the value from the array at the given negative index", function() {
 		expect(negativeIndex(['a', 'b', 'c', 'd', 'e'], -2)).toBe('d');
@@ -45,7 +45,7 @@ describe("negativeIndex", function() {
 	});
 });
 
-
+// #5. removeM
 describe("removeM", function() {
 	it("should remove all 'm' characters in a string, uppercase and lowercase", function() {
 		expect(removeM('family')).toBe('faily');
@@ -61,12 +61,13 @@ describe("removeM", function() {
 });
 
 // FUNCTION PRINTOBJECT COMPLETE, NEED TO FINISH SPEC
+// #8. printObject
 // describe("printObject", function() {
 // 	it("should console log each key-value pair of an object in the format 'key is value' on separate lines", function() {
-
 // 	});
 // });
 
+// #7. vowels
 describe("vowels", function() {
 	it("should return an array of all vowels in a given string", function() {
 		expect(vowels('alabama')).toEqual(['a', 'a', 'a', 'a']);
@@ -79,9 +80,15 @@ describe("vowels", function() {
 });
 
 
-
-
-
+// #8. twins
+describe("twins", function() {
+	it("should return true if every pair of items in the given array is the same", function() {
+		expect(twins(['a', 'a', 'b', 'b', 'c', 'c'])).toBe(true);
+		expect(twins(['a', 'a', 'b', 'z'])).toBe(false);
+		expect(twins(['a', 'a', 'b'])).toBe(false);
+		expect(twins(['a', 'a', 'b', undefined])).toBe(false);
+	});
+});
 
 
 

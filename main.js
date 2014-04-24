@@ -94,12 +94,14 @@ var vowels = function(str) {
 };
 
 
-
-
-
-
-
-
+// 8. Write a function called 'twins' which takes an array and returns
+// true if every pair of items in the array is the same.
+var twins = function(arr) {
+	function checkIfSame (a,b) {
+		return a === b ? true : false;
+	}
+	return arr.filter(checkIfSame);
+};
 
 
 
