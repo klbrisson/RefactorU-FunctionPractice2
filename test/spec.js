@@ -67,7 +67,16 @@ describe("removeM", function() {
 // 	});
 // });
 
-
+describe("vowels", function() {
+	it("should return an array of all vowels in a given string", function() {
+		expect(vowels('alabama')).toEqual(['a', 'a', 'a', 'a']);
+		expect(vowels('What lets in youth?')).toEqual(['a', 'e', 'i', 'o', 'u']);
+	});
+	it("should return an empty array if there are no vowels in the string", function() {
+		expect(vowels('ghjkl')).toEqual([]);
+		expect(vowels('')).toEqual([]);
+	});
+});
 
 
 

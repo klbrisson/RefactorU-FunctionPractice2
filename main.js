@@ -56,12 +56,10 @@ var negativeIndex = function(arr, num) {
 var removeM = function(str) {
 	var newStr = '';
 	var strArr = str.toLowerCase().split('');
-	console.log(strArr);
 
 	for (var i=0; i < strArr.length; i++) {
 		if (strArr[i] !== 'm') {
 			newStr += strArr[i];
-			console.log(newStr);
 		}
 	};
 	return newStr;
@@ -82,7 +80,17 @@ var printObject = function(obj) {
 // 7. Write a function called 'vowels' which takes a string and returns
 // an array of all the vowels in the string, including duplicates.
 var vowels = function(str) {
-	
+	var strArr = str.toLowerCase().split('');
+	function checkIfVowel (letter) {
+		if (letter === 'a' ||
+			letter === 'e' ||
+			letter === 'i' ||
+			letter === 'o' ||
+			letter === 'u') {
+			return true;
+		}
+	}
+	return strArr.filter(checkIfVowel);
 };
 
 
