@@ -97,7 +97,7 @@ var vowels = function(str) {
 // 8. Write a function called 'twins' which takes an array and returns
 // true if every pair of items in the array is the same.
 var twins = function(arr) {
-	twin = true;
+	var twin = true;
 	for (var i=0; i<arr.length; i+=2) {
 		if (arr[i] !== arr[i+1]) {
 			twin = false;
@@ -107,9 +107,32 @@ var twins = function(arr) {
 };
 
 
+// 9. Write a function called 'or' which takes an array of booleans and returns true if any one
+// of them is true. Given an empty array, return false. If you find an item that is true,
+// the function should return true immediately and not continue checking further values.
+var or = function(arr) {
+	for (var i=0; i<arr.length; i++) {
+		if (arr[i] === true) {
+			return true;
+		}
+	} 
+	return false;
+};
 
 
-
+// 10. Write a function called 'unique' which takes an array of strings,
+// and returns a new array consisting of the unique values (no duplicates).
+var unique = function(arr) {
+	var newArr = [];
+	for (var i=0; i<arr.length; i++) {
+		for (var j=0; j<newArr.length; j++) {
+			if (arr[i] !== newArr[j]) {
+				newArr.push(arr[i]);
+			}
+		}
+	}
+	return newArr;
+};
 
 
 

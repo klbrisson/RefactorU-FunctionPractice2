@@ -90,7 +90,26 @@ describe("twins", function() {
 	});
 });
 
+// #9. or
+describe("or", function() {
+	it("should return true if any item in an array is true", function() {
+		expect(or([false, false, true, false])).toBe(true);
+	});
+	it("should return false if no items in an array are true", function() {
+		expect(or([false, false, false])).toBe(false);
+		expect(or([])).toBe(false);
+		expect(or([0,1,2])).toBe(false);
+		expect(or(['a','b','c'])).toBe(false);
+	});
+});
 
+// #10. unique
+describe("unique", function() {
+	it("should return an array of unique items, removing any duplicates"), function() {
+		expect(unique(['a', 'b', 'a', 'c', 'd', 'd'])).toEqual(['a', 'b', 'c', 'd']);
+		expect(unique(['todd', 'avery', 'maria', 'avery'])).toEqual(['todd', 'avery', 'maria']);
+	};
+});
 
 
 
